@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
+    <title>FruitMart</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="text-bg-dark">
+
+    {% block header %}
+    <nav class="navbar navbar-nav mx-auto navbar-expand-lg bg-dark">
+        <div class="container-fluid ">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto me-auto mb-4 mb-lg-0">
+                    <li class="nav-item mx-5">
+                        <a class="nav-link fs-5 text-white" href="{% url 'index' %}">HOME</a>
+                    </li>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link fs-5 text-white" href="{% url 'order' %}">ORDER</a>
+                    </li>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link fs-5 text-white" href="{% url 'contact' %}">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <hr class="border border-white border-2 opacity-50">
+
+    {% endblock header %}
+    {% block main%}
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <h2 class="text-center m-3">Welcome to FruitMart</h2>
+
+            <div class="card text-bg-light m-4" style="max-width: 18rem;">
+                <img src="{% static 'images/apple.jpg' %}" class="card-img-top" alt="apple">
+                <div class="card-body card text-bg-light mb-3" style="max-width: 18rem;">
+                    <h5 class="card-title">Apple</h5>
+                    <p class="card-text text-dark">Some quick example text to build on the card title and make up the
+                        bulk of the
+                        card's
+                        content.</p>
+                    <a href="#" class="btn btn-primary">₹115.00</a>
+                </div>
+            </div>
+
+            <div class="card text-bg-light m-4" style="max-width: 18rem;">
+                <img src="{% static 'images/graps.jpg' %}" class="card-img-top" alt="apple">
+                <div class="card-body card text-bg-light mb-3" style="max-width: 18rem;">
+                    <h5 class="card-title">Graps</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a href="#" class="btn btn-primary">₹75.00</a>
+                </div>
+            </div>
+
+            <div class="card text-bg-light m-4" style="max-width: 18rem;">
+                <img src="{% static 'images/kivi.jpg' %}" class="card-img-top" alt="apple">
+                <div class="card-body card text-bg-light mb-3" style="max-width: 18rem;">
+                    <h5 class="card-title">Kiwi</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a href="#" class="btn btn-primary">₹68.00</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock main%}
+</body>
+
+</html>

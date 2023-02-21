@@ -1,0 +1,56 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block main%}
+
+<div class="container mt-5 p-3 rounded cart">
+    <div class="row no-gutters justify-content-center">
+        <div class="col-md-8">
+            <div class="product-details mr-2">
+                <div class="d-flex flex-row align-items-center"><i class="fa fa-long-arrow-left"></i><span class="ml-2">
+                        Continue Shopping</span></div>
+                <hr>
+                <h6 class="mb-0">Shopping cart</h6>
+                <div class="d-flex justify-content-between"><span>You have 4 items in your cart</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                    <div class="d-flex flex-row"><img class="rounded" src="{% static 'images/apple.jpg' %}" width="50">
+                        <div class="m-sm-1"><span class="font-weight-bold d-block">Apple</span><span class="spec">1
+                                Kg</span></div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center"><span class="d-block"></span><span
+                            class="d-block ml-5 font-weight-bold">₹115.00</span><i
+                            class="fa fa-trash-o ml-3 text-black-50"></i></div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                    <div class="d-flex flex-row"><img class="rounded" src="{% static 'images/graps.jpg' %}" width="50">
+                        <div class="m-sm-1"><span class="font-weight-bold d-block">Grapes</span><span
+                                class="spec">500g</span></div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center"><span class="d-block"></span><span
+                            class="d-block ml-5 font-weight-bold">₹75.00</span><i
+                            class="fa fa-trash-o ml-3 text-black-50"></i></div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                    <div class="d-flex flex-row"><img class="rounded" src="{% static 'images/kivi.jpg' %}" width="50">
+                        <div class="m-sm-1"><span class="font-weight-bold d-block">Kiwi</span><span
+                                class="spec">2Kg</span></div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center"><span class="d-block"></span><span
+                            class="d-block ml-5 font-weight-bold">₹68.00</span><i
+                            class="fa fa-trash-o ml-3 text-black-50"></i></div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                    <div class="d-flex flex-row"><img class="rounded" src="{% static 'images/black.jpg' %}" width="50">
+                        <div class="m-sm-1"><span class="font-weight-bold d-block">Imported Grapes
+                                &nbsp;</span><span class="spec">1Kg</span></div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center"><span class="d-block"></span><span
+                            class="d-block ml-5 font-weight-bold">₹81.00</span><i
+                            class="fa fa-trash-o ml-3 text-black-50"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock main%}
